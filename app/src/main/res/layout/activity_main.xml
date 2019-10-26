@@ -5,24 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:id="@+id/constraint_lyt">
+    android:id="@+id/constraint_lyt"
+    android:paddingLeft="@dimen/horizontal_padding"
+    android:paddingRight="@dimen/horizontal_padding"
+    >
 
-    <TextView
+    <EditText
         android:id="@+id/first_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintTop_toTopOf="@id/constraint_lyt"
+        android:layout_marginTop="@dimen/input_top_margin"
+        android:drawableStart="@drawable/ic_person_outline_black_24dp"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:fontFamily="@font/productsans_regular"
+        android:hint="@string/first_name_hint"
+        android:paddingTop="@dimen/parent_top_margin"
         app:layout_constraintLeft_toLeftOf="@id/constraint_lyt"
         app:layout_constraintRight_toRightOf="@id/constraint_lyt"
-        />
+        app:layout_constraintTop_toTopOf="@id/constraint_lyt" />
 
-    <TextView
+    <EditText
         android:id="@+id/last_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintTop_toBottomOf="@id/first_name"/>
+        android:hint="@string/last_name_hint"
+        app:layout_constraintTop_toBottomOf="@id/first_name"
+        android:paddingLeft="@dimen/last_name_padding"
+        android:layout_marginTop="@dimen/input_top_margin"
+        />
 
     <EditText
         android:id="@+id/phone_entry"
@@ -30,7 +40,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="phone"
-        app:layout_constraintTop_toBottomOf="@id/last_name"/>
+        app:layout_constraintTop_toBottomOf="@id/last_name"
+        android:hint="@string/phone_hint"
+        android:drawableStart="@drawable/ic_phone_black_24dp"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:layout_marginTop="@dimen/input_top_margin"
+        />
 
     <EditText
         android:id="@+id/email_entry"
@@ -38,7 +53,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
-        app:layout_constraintTop_toBottomOf="@id/phone_entry"/>
+        app:layout_constraintTop_toBottomOf="@id/phone_entry"
+        android:hint="@string/email_hint"
+        android:drawableStart="@drawable/ic_email_black_24dp"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:layout_marginTop="@dimen/input_top_margin"
+        />
 
     <EditText
         android:id="@+id/address_entry"
@@ -46,5 +66,34 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPostalAddress"
-        app:layout_constraintTop_toBottomOf="@id/email_entry"/>
+        app:layout_constraintTop_toBottomOf="@id/email_entry"
+        android:hint="@string/address_hint"
+        android:drawableStart="@drawable/ic_place_black_24dp"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:layout_marginTop="@dimen/input_top_margin"
+        />
+
+    <EditText
+        android:id="@+id/website_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        app:layout_constraintTop_toBottomOf="@id/address_entry"
+        android:hint="@string/website_hint"
+        android:drawableStart="@drawable/ic_public_black_24dp"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:layout_marginTop="@dimen/input_top_margin"
+        />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_button_label"
+        app:layout_constraintTop_toBottomOf="@id/website_entry"
+        android:layout_marginTop="@dimen/input_top_margin"
+        android:backgroundTint="@color/colorBlue"
+        android:textColor="@color/textPrimary"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
