@@ -95,5 +95,6 @@
         android:layout_marginTop="@dimen/input_top_margin"
         android:backgroundTint="@color/colorBlue"
         android:textColor="@color/textPrimary"
+        android:onClick="onButtonClick"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
