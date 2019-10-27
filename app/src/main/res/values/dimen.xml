@@ -3,6 +3,6 @@
     <dimen name="horizontal_padding">20dp</dimen>
     <dimen name="input_top_margin">25dp</dimen>
     <dimen name="parent_top_margin">30dp</dimen>
-    <dimen name="drawable_padding">5dp</dimen>
-    <dimen name="last_name_padding">30dp</dimen>
+    <dimen name="drawable_padding">10dp</dimen>
+    <dimen name="last_name_padding">34dp</dimen>
 </resources>
