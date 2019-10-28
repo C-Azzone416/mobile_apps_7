@@ -80,6 +80,7 @@
                 android:drawableTop="@drawable/ic_email_black_24dp"
                 android:text="@string/email_button_label"
                 style="@style/actionButtons"
+                android:onClick="onSMSButtonClick"
                 />
             <Button
                 android:id="@+id/map_button"
@@ -118,7 +119,7 @@
         android:layout_height="wrap_content"
         android:text="@string/email_hint"
         app:layout_constraintTop_toBottomOf="@id/phone_number"
-        android:drawableStart="@drawable/ic_sms_black_24dp"
+        android:drawableStart="@drawable/ic_email_black_24dp"
         style="@style/textView"
         />
 

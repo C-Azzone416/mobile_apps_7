@@ -11,13 +11,12 @@
     >
 
     <EditText
-        android:id="@+id/first_name"
+        android:id="@+id/first_name_entry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/input_top_margin"
         android:drawableStart="@drawable/ic_person_outline_black_24dp"
         android:drawablePadding="@dimen/drawable_padding"
-        android:fontFamily="@font/productsans_regular"
         android:hint="@string/first_name_hint"
         android:paddingTop="@dimen/parent_top_margin"
         app:layout_constraintLeft_toLeftOf="@id/constraint_lyt"
@@ -25,11 +24,11 @@
         app:layout_constraintTop_toTopOf="@id/constraint_lyt" />
 
     <EditText
-        android:id="@+id/last_name"
+        android:id="@+id/last_name_entry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/last_name_hint"
-        app:layout_constraintTop_toBottomOf="@id/first_name"
+        app:layout_constraintTop_toBottomOf="@id/first_name_entry"
         android:paddingLeft="@dimen/last_name_padding"
         android:layout_marginTop="@dimen/input_top_margin"
         />
@@ -40,7 +39,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="phone"
-        app:layout_constraintTop_toBottomOf="@id/last_name"
+        app:layout_constraintTop_toBottomOf="@id/last_name_entry"
         android:hint="@string/phone_hint"
         android:drawableStart="@drawable/ic_phone_black_24dp"
         android:drawablePadding="@dimen/drawable_padding"
