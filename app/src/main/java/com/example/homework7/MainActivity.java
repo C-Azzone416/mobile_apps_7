@@ -38,18 +38,6 @@ public class MainActivity extends AppCompatActivity {
         webPageET = findViewById(R.id.website_entry);
         emailET = findViewById(R.id.email_entry);
 
-
-        // DEBUG CODE
-
-        addressET.setText("123 Sesame Street");
-        phoneET.setText("123-456-7890");
-        emailET.setText("abc@xyz.com");
-        webPageET.setText("www.google.com");
-
-        firstNameET.setText("Big");
-        lastNameET.setText("Bird");
-
-        // END DEBUG CODE
     }
 
     public void onButtonClick(View view) {
