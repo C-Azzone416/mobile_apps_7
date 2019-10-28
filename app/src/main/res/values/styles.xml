@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -16,7 +16,7 @@
     <style name="actionButtons" parent="Widget.AppCompat.Button">
         <item name="android:drawableTint">@color/colorBlue</item>
         <item name="android:textColor">@color/colorBlue</item>
-        <item name="android:backgroundTint">@color/textPrimary</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
 
     </style>
 
