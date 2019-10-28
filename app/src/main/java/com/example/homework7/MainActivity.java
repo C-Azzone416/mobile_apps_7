@@ -24,13 +24,6 @@ public class MainActivity extends AppCompatActivity {
     EditText webPageET;
     EditText emailET;
 
-    String firstName;
-    String lastName;
-    String address;
-    String phone;
-    String webpage;
-    String email;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,60 +31,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       /* firstNameET = findViewById(R.id.first_name_entry);
-        firstNameET.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-                firstName = firstNameET.getText().toString();
-                return false;
-            }
-        });
-
+        firstNameET = findViewById(R.id.first_name_entry);
         lastNameET = findViewById(R.id.last_name_entry);
-        lastNameET.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-                lastName = lastNameET.getText().toString();
-                return false;
-            }
-        });
-
         phoneET = findViewById(R.id.phone_entry);
-        phoneET.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-                phone = phoneET.getText().toString();
-                return false;
-            }
-        });
-
         addressET = findViewById(R.id.address_entry);
-        addressET.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-                address = addressET.getText().toString();
-                return false;
-            }
-        });
-
         webPageET = findViewById(R.id.website_entry);
-        webPageET.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-                webpage = webPageET.getText().toString();
-                return false;
-            }
-        });*/
-
         emailET = findViewById(R.id.email_entry);
-        emailET.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-                email = emailET.getText().toString();
-                return false;
-            }
-        });
 
+
+        // DEBUG CODE
+
+        addressET.setText("123 Sesame Street");
+        phoneET.setText("123-456-7890");
+        emailET.setText("abc@xyz.com");
+        webPageET.setText("www.google.com");
+
+        firstNameET.setText("Big");
+        lastNameET.setText("Bird");
+
+        // END DEBUG CODE
     }
 
     public void onButtonClick(View view) {
@@ -99,12 +57,12 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle contact = new Bundle();
 
-        contact.putString(ADDRESS_CODE, address);
-        contact.putString(PHONE_CODE, phone);
-        contact.putString(EMAIL_CODE, email);
-        contact.putString(WEBPAGE_CODE, webpage);
+        contact.putString(ADDRESS_CODE, addressET.getText().toString());
+        contact.putString(PHONE_CODE, phoneET.getText().toString());
+        contact.putString(EMAIL_CODE, emailET.getText().toString());
+        contact.putString(WEBPAGE_CODE, webPageET.getText().toString());
 
-        Person p = new Person(firstName, lastName);
+        Person p = new Person(firstNameET.getText().toString(), lastNameET.getText().toString());
         contact.putParcelable(PERSON_CODE, p);
 
         intent.putExtras(contact);

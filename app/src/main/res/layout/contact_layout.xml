@@ -60,6 +60,7 @@
                 android:drawableTop="@drawable/ic_phone_black_24dp"
                 android:text="@string/call_button_label"
                 style="@style/actionButtons"
+                android:onClick="onCallButtonClick"
                 />
 
             <Button
@@ -70,6 +71,7 @@
                 android:drawableTop="@drawable/ic_sms_black_24dp"
                 android:text="@string/text_button_label"
                 style="@style/actionButtons"
+                android:onClick="onSMSButtonClick"
                 />
 
             <Button
@@ -80,7 +82,7 @@
                 android:drawableTop="@drawable/ic_email_black_24dp"
                 android:text="@string/email_button_label"
                 style="@style/actionButtons"
-                android:onClick="onSMSButtonClick"
+                android:onClick="onEmailButtonClick"
                 />
             <Button
                 android:id="@+id/map_button"
@@ -90,6 +92,7 @@
                 android:drawableTop="@drawable/ic_directions_black_24dp"
                 android:text="@string/directions_button_label"
                 style="@style/actionButtons"
+                android:onClick="onMapButtonClick"
                 />
             <Button
                 android:id="@+id/imageButton4"
@@ -99,6 +102,7 @@
                 android:drawableTop="@drawable/ic_public_black_24dp"
                 android:text="@string/web_button_label"
                 style="@style/actionButtons"
+                android:onClick="onWebButtonClick"
                 />
         </LinearLayout>
     </HorizontalScrollView>
